@@ -100,7 +100,8 @@ const make_card = names => {
 		ctx.fillStyle = "#000000";
 		ctx.font = '35px arial';
 		ctx.fillText(card_number, 718, 596);
-		ctx.fillText(names, 337, 586);
+		ctx.font = '40px arial';
+		ctx.fillText(names, 337, 590);
 		ctx.restore();
 		$("a#link").attr({href: $("canvas#card")[0].toDataURL('image/png', 0.85), download: `${card_number}_${names}.png`})
 	}
