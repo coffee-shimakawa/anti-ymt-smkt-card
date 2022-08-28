@@ -1,0 +1,32 @@
+canvas#card {
+	display: block;
+	margin: 0 auto;
+}
+
+ul#names {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+li.name {
+	/*display: inline;*/
+	list-style: none;
+}
+
+.br_::after {
+  content: "\A";
+  white-space: pre;
+}
+
+span#ErrorMessage {
+	color: #F00;
+}
+
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+	-webkit-appearance: none; 
+	margin: 0; 
+}
+input[type="number"] { 
+	-moz-appearance:textfield; 
+}

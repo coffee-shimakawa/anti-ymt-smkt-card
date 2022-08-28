@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="index.js"></script>
+		<link rel="stylesheet" href="index.css">
+		<title>反神真都Q 下北沢 カード</title>
+	</head>
+	<body>
+		<div id="explain">
+			新規作成:<br>
+			新規作成を選択し、パスワードと名前を入力し、送信ボタンを押してください<br>
+			<br>
+			読み込み:<br>
+			読み込みを選択し、IDとパスワードを入力し、送信ボタンを押してください<br>
+			IDとパスワードが一致していた場合、名前一覧が出てきます<br>
+			そこで新しく名前を追加したり、削除できます<br>
+			<br>
+			カード:<br>
+			カードボタンを押すと、その上にある名前がカードに書かれます<br>
+			変更したい場合は、その場所を変更し、"変更"ボタンを押してください<br>
+			<br>
+			ダウンロード:<br>
+			ダウンロードを押すとカードの画像がダウンロードできます<br>
+			<br>
+			パスワード変更:<br>
+			読み込みを行った後にできます<br>
+			今まで使ってたパスワードを入力してから、新しいパスワードを入力し、完了したら "パスワードを変更する" ボタンを押してください<br>
+			なおパスワードはハッシュ化されているので、誰にもわかりません<br>
+		</div>
+		<select id="mode">
+			<option selected disabled>選択してください</option>
+			<option value="save">新規作成</option>
+			<option value="load">読み込み</option>
+			<option value="allLoad">全て読み込み(ロコモコ専用)</option>
+		</select>
+		<span id="ErrorMessage"></span>
+		<div id="input">
+			<input type="number" id="number" placeholder="ID" disabled>
+			<input type="password" id="password" placeholder="パスワード" disabled>
+			<input type="text" id="name1" placeholder="名前" disabled>
+			<button id="send">送信</button>
+		</div>
+		<div id="data">
+			<span id="your_id">あなたのIDは -------- です</span>
+			<ul id="names">
+			</ul>
+			<button id="add">追加</button>
+			<button id="change">変更</button>
+			<button id="restore">変更取り消し</button>
+			<div id="Cpassword">
+				<input type="password" id="OldPassword" placeholder="古いパスワード">
+				<input type="password" id="NewPassword" placeholder="新しいパスワード">
+				<button id="SetPassword">パスワードを変更する</button>
+			</div>
+		</div>
+		<div id="card_data">
+			<a id="link">ダウンロード</a>
+			<canvas id="card"></canvas>
+		</div>
+	</body>
+</html>
