@@ -35,7 +35,7 @@ const RunGAS = (dict={}, doneFunc=() => {}, opt={}) => {
 			stopError: (opt.stopError != undefined) ? opt.stopError : true
 		}
 	}
-	let gid = "AKfycbz4eZC6v4BfNZTFs1_HkJvOMkxVzt4XqdMnOJYuPT4J7MYVMEgqbAqTMerIxWGONyd8qA";
+	let gid = "AKfycbw19veSGukPMIL2265Y-W-Hm5rhCPip8Lh9OKRDQk4tB86-cc2LDXi13lkY1t1wgOIsxg";
 	let code = "";
 	for (let key in dict) {
 		code += key + "=" + dict[key] + "&";
